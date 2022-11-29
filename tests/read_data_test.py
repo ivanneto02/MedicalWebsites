@@ -1,9 +1,10 @@
 import pandas as pd
 
-def main():
-    df = pd.read_csv("D:\\Documents\\Research\\UCR\\PiLabs\\MedicalWebsiteDetection\\datasets\\scraped_preprocessed_fulltext.csv", nrows=10)
-    
+from config import *
+
+def read_data_test():
+    df = pd.read_csv(DATA_PATH + "/" + DATA_NAME, nrows=N_ROWS)
     print(df.head())
 
 if __name__ == "__main__":
-    main()
+    read_data_test()
